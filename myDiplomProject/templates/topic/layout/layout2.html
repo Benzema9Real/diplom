@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block one %}
+<h5>Примечание: для того чтобы создать свою статью вы должны <button type="button" class="btn btn-outline-success"><a href="{% url 'registr' %}">Зарегистрироваться </a></button>
+или <a href="{% url 'login' %}">Войти</a>
+</h5>
+<h5>Для того чтобы создать свою статью нажмите</h5><button type="button" class="btn btn-outline-warning"><a href="{% url 'create' %}">Создать</a></button>
+
+{% endblock %}
+{% block two %}
+
+{% endblock %}
+
+
+
+
+</body>
+</html>

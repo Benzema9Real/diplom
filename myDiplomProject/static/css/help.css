@@ -1,0 +1,17 @@
+.help{
+    background-color: black;
+}
+
+.ins{
+    width: 50px;
+    height: 60px;
+}
+
+.help_text{
+    margin-bottom: 100%;
+}
+
+.help_head{
+    color: blue;
+}
+
