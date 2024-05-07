@@ -10,16 +10,10 @@
 </head>
 <body>
 <HEADER class="header">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <div class="black1">
+        <div class="color2"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'sport' %}">Спорт</a>
                     </li>
@@ -42,21 +36,50 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'grade_forms' %}">Оценка</a>
                     </li>
                 </ul>
-            </div>
-        </div>
+
+    </div>
     </nav>
 </HEADER>
-<SECTION class="section" background="#FFFFFF">
+<div class="color">
+<SECTION class="section">
+    <div class="black">
+
+    <div class="center">
     <h3>Добро пожаловать!!!</h3>
+        <br>
+        <button type="button" class="btn btn-outline-dark"><a class="nav-link text-green fw-bold" href="{% url 'registr' %}">Зарегистрироваться</a></button><button type="button" class="btn btn-outline-dark"><a class="nav-link text-green fw-bold" href="{% url 'login' %}">Войти</a></button>
     <br>
-    <div class="center"><h5><i>Это - платформы для блоггинга, которая позволит пользователям создавать, редактировать и комментировать
-        статьи.
-        <br>
-        Платформа будет обеспечивать удобное взаимодействие между авторами статей и читателями, а также обеспечит
-        базовый функционал
-        <br>
-        управления контентом для администраторов.
-    </i></h5></div>
+        </div>
+        <div class="block">
+       <h4>
+      Это - платформы для блоггинга, которая позволит пользователям создавать,
+редактировать и комментировать статьи. Платформа будет обеспечивать удоб-
+ное взаимодействие между авторами статей и читателями, а также обеспечит
+базовый функционал управления контентом для администраторов.
+          </h4>
+        </div>
+
+<div class="div">
+<div class="center">
+<div class="text">
+<div class="card">
+  <div class="card-body">
+      <div class="color">
+      <h4>
+      Это - платформы для блоггинга, которая позволит пользователям создавать,
+редактировать и комментировать статьи. Платформа будет обеспечивать удоб-
+ное взаимодействие между авторами статей и читателями, а также обеспечит
+базовый функционал управления контентом для администраторов.
+          </h4>
+  </div>
+</div>
+    </div>
+</div>
+    </div>
+
+
+
+    </h5></div>
     <h2>Вы можете создать свои статьи на разные темы
         <br>
         Например:
@@ -127,6 +150,7 @@
   </div>
 
 </SECTION>
+    </div>
 <FOOTER class="footer_name">
     <h1><span class="footer" >Платформы для блоггинга</span></h1>
     <br>
@@ -163,17 +187,16 @@
         <div class="row align-items-start">
             <div class="col">
                 <div class="footer_image"><h1><img src="{% static 'media/tg.png' %}" class="image"></h1>
-                    <h3>tel:+7 904 339-57-67</h3></div>
+                    <h3><a href="t.me/Emir0018">t.me/Emir0018</a></h3></div>
 
             </div>
             <div class="col">
                 <div class="footer_image"><h1><img src="{% static 'media/wk.png' %}" class="image"></h1>
-                    <h3>tel:+7 904 339-57-67</h3></div>
-
+                                  <h3><a href="https://vk.com/id785826421">Мой VK</a></h3></div>
             </div>
             <div class="col">
                 <div class="footer_image"><h1><img src="{% static 'media/whatsApp.jpg' %}" class="image"></h1>
-                    <h3>tel:+7 904 339-57-67</h3></div>
+           <h3><a href="https://wa.me/89043395767">Мой WhatsApp</a></h3></div>
 
             </div>
         </div>

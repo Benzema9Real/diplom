@@ -8,12 +8,12 @@
 
 .footer{
     margin-left: 34%;
-    color: Aqua;
+    color: #009900;
 }
 
 .footer_name{
     background-color: black;
-    color: Aqua;
+    color: #009900;
 }
 
 .image{
@@ -25,9 +25,32 @@
 .footer_image{
     background-color: black;
 }
-.slide{
- width: 50%;
-    height: 50%;
-}
+
 .center{
     text-align: center;}
+
+.text{
+    width: 600px;
+
+}
+
+.div{
+    margin-left: 35%;
+}
+.color{
+    background: #009900;
+}
+.color2{
+    color: #009900;
+}
+.black{
+    background: #009900;
+}
+.black1{
+    background: black;
+}
+.block{
+    border: 5px;
+
+    width: 600px;
+}
