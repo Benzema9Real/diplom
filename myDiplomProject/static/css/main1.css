@@ -8,12 +8,12 @@
 
 .footer{
     margin-left: 34%;
-    color: #009900;
+    color: rgb(141,194,111);
 }
 
 .footer_name{
     background-color: black;
-    color: #009900;
+    color: rgb(141,194,111);
 }
 
 .image{
@@ -38,19 +38,33 @@
     margin-left: 35%;
 }
 .color{
-    background: #009900;
+    background: rgb(141,194,111);
 }
 .color2{
-    color: #009900;
+    color: rgb(141,194,111);
 }
 .black{
-    background: #009900;
+    background: rgb(141,194,111);
 }
 .black1{
     background: black;
 }
-.block{
-    border: 5px;
 
-    width: 600px;
+.nav{
+   width: 100px;
+    height: 100px;
+    margin-top: 10px;
+
+}
+
+.nav2{
+
+    margin-top: 10px;
+    }
+.list{    background: #FFFFFF;
+
+   width: 500px;
+    height: 400px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-left: 40%;
 }
