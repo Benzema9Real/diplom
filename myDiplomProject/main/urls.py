@@ -14,5 +14,5 @@ urlpatterns = [path('', views.main, name='main'),
                path('grade_forms/', views.grade_forms, name='grade_forms'),
                path('grade/', views.grade, name='grade'),
                path('login/', LoginView.as_view(template_name='registration/login.html'), name='login'),
-               path('<slug:slug>/', views.MyDetailView.as_view(), name='mydetail')
+               path('<slug:slug>/', views.MyDetailView.as_view(), name='detail')
                ]

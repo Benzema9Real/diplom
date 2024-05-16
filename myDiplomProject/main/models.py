@@ -7,7 +7,7 @@ class Article(models.Model):
     title = models.CharField('Название', max_length=50)
     category = models.CharField('Категория', max_length=50)
     text = models.TextField('Содержание')
-    data = models.DateTimeField('Дата публикации')
+    data = models.DateTimeField('Дата публикации',auto_now_add=True)
     email = models.EmailField('Email')
     my_image = models.ImageField(upload_to='images/')
     slug = models.SlugField(null=False, unique=True)

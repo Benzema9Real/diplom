@@ -12,7 +12,29 @@
 
 
 
+{% block two %}
+<br>
 
+{% for cooking in cookings %}
+<div class="card mb-3">
+     <div class="img">
+  <img src="{{cooking.my_image.url}}" class="card-img-top" alt="...">
+         </div>
+  <div class="card-body">
+    <h5 class="card-title">{{cooking.title}}</h5>
+          <h6 class="card-title">Kатегория: {{cooking.category}}</h6>
+    <p class="card-text">{{cooking.email}}</p>
+    <p class="card-text"><small class="text-body-secondary"> {{cooking.data}}</small></p>
+                      <button type="button" class="btn btn-outline-primary"><a class="nav-link text-green fw-bold"
+                                                                      href="{% url 'detail' slug=cooking.slug %}">Подробнее</a>
+                </button>
+  </div>
+</div>
+<br>
+
+{% endfor %}
+{% endblock %}
+<script src="htt
 
 
 

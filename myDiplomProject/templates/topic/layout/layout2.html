@@ -3,9 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+      <link rel="stylesheet" href="{% static 'css/topic.css' %}">
       <link rel="stylesheet" href="{% static 'css/main1.css' %}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Title</title>
+    <title>Статьи</title>
 </head>
 <body>
 {% block one %}
@@ -28,12 +29,18 @@
     </div>
   </div>
 </nav>
+<br>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Вы можете добавить свою статью</h5>
+
+<button type="button" class="btn btn-outline-warning"><a href="{% url 'create' %}"> Добавить</a></button>
+  </div>
+</div>
+
 {% endblock %}
 {% block two %}
-{% for article in articles %}
-{{ article.title }}
-{{ article.category }}
-{% endfor %}
+
 {% endblock %}
 
 

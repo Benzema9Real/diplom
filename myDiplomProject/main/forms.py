@@ -6,9 +6,10 @@ from .models import Article, Grade, Comment ,Support
 
 
 class ArticleModelForm(ModelForm):
+
     class Meta:
         model = Article
-        fields = '__all__'
+        fields = ('title', 'category' , 'text',  'email','my_image')
 
 
 class GradeModelForm(ModelForm):
@@ -31,8 +32,8 @@ class SupportModelForm(ModelForm):
 
 class RegisterForm(UserCreationForm):
     captcha = ReCaptchaField()
-    exclude = ['slug']
+
 
     class Meta:
         model = User
-        fields = ('username', 'email', 'first_name', 'last_name', 'password1', 'password2')
+        fields = ('username', 'email' , 'password1', 'password2')
