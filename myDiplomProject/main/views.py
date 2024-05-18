@@ -11,22 +11,22 @@ def main(request):
 
 def sport(request):
     sports = Article.objects.filter(category='спорт')
-    return render(request, 'topic/sport.html', {'sports': sports})
+    return render(request, 'topic/sport.html', {'sports': sports[::-1]})
 
 
 def scince(request):
     scinces = Article.objects.filter(category='наука')
-    return render(request, 'topic/scince.html', {'scinces': scinces})
+    return render(request, 'topic/scince.html', {'scinces': scinces[::-1]})
 
 
 def cooking(request):
     cookings = Article.objects.filter(category='кулинария')
-    return render(request, 'topic/cooking.html', {'cookings': cookings})
+    return render(request, 'topic/cooking.html', {'cookings': cookings[::-1]})
 
 
 def technic(request):
     technics = Article.objects.filter(category='технологии')
-    return render(request, 'topic/technic.html', {'technics': technics})
+    return render(request, 'topic/technic.html', {'technics': technics[::-1]})
 
 
 def help(request):
@@ -41,16 +41,16 @@ class MyDetailView(DetailView):
     model = Article
     template_name = 'detail/detail.html'
     context_object_name = 'article'
-    slug_field = 'slug'
+
 
 
 @login_required
 def create(request):
     if request.method == 'POST':
-        form = ArticleModelForm(request.POST)
+        form = ArticleModelForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('article')
+            return redirect('main')
 
     else:
         form = ArticleModelForm()

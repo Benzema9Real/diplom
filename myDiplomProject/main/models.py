@@ -10,12 +10,7 @@ class Article(models.Model):
     data = models.DateTimeField('Дата публикации',auto_now_add=True)
     email = models.EmailField('Email')
     my_image = models.ImageField(upload_to='images/')
-    slug = models.SlugField(null=False, unique=True)
 
-    def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
 
 
 class Comment(models.Model):
@@ -34,4 +29,3 @@ class Grade(models.Model):
     grade = models.FloatField('Оценка',validators=[MaxValueValidator(5),MinValueValidator(1)])
     comment = models.TextField('Комментарий')
     email = models.EmailField('Email')
-

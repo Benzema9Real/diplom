@@ -8,7 +8,28 @@
     <title>Наука</title>
 </head>
 <body>
+{% block two %}
+<br>
 
+{% for scince in scinces %}
+<div class="card mb-3">
+     <div class="img">
+  <img src="{{scince.my_image.url}}" class="card-img-top" alt="...">
+         </div>
+  <div class="card-body">
+    <h5 class="card-title">{{scince.title}}</h5>
+          <h6 class="card-title">Kатегория: {{scince.category}}</h6>
+    <p class="card-text">{{scince.email}}</p>
+    <p class="card-text"><small class="text-body-secondary"> {{scince.data}}</small></p>
+                      <button type="button" class="btn btn-outline-primary"><a class="nav-link text-green fw-bold"
+                                                                      href="{% url 'detail' pk=scince.pk %}">Подробнее</a>
+                </button>
+  </div>
+</div>
+<br>
+
+{% endfor %}
+{% endblock %}
 
 
 
