@@ -19,7 +19,25 @@
   </div>
 </div>
 </div>
+<h3>Добавить комеент</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</section>
 
+<section>
+    <h3>Коментарий</h3>
+    {% for comment in comments %}
+    <div>
+        <p>{{ comment.text }}</p>
+        <p>by {{ comment.email }} on {{ comment.data }}</p>
+    </div>
+    {% empty %}
+    <p>No comments yet.</p>
+    {% endfor %}
+</section>
 {% endblock %}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

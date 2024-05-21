@@ -20,10 +20,10 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
-
-    text = models.CharField('Комментарий', max_length=300)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
+    text = models.CharField('Комментарий', max_length=1000)
     email = models.EmailField('Email')
-    data = models.DateTimeField('Дата')
+    data = models.DateTimeField('Дата',auto_now_add=True)
 
 
 class Support(models.Model):

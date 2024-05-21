@@ -20,8 +20,7 @@ class GradeModelForm(ModelForm):
 class CommentModelForm(ModelForm):
     class Meta:
         model = Comment
-        fields = '__all__'
-
+        fields = ['text', 'email']
 
 class SupportModelForm(ModelForm):
     class Meta:

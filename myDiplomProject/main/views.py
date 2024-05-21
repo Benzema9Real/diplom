@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView
 from .models import Article, Grade,  Comment
-from .forms import ArticleModelForm, RegisterForm, GradeModelForm, SupportModelForm
+from .forms import ArticleModelForm, RegisterForm, GradeModelForm, SupportModelForm, CommentModelForm
 
 
 def main(request):
@@ -41,6 +41,21 @@ class MyDetailView(DetailView):
     model = Article
     template_name = 'detail/detail.html'
     context_object_name = 'article'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['comment_form'] = CommentModelForm()
+        context['comments'] = self.object.comments.all()
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = CommentModelForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.article = self.get_object()
+            comment.save()
+            return redirect(request.path)
+        return self.get(self, request, *args, **kwargs)
 
 
 
