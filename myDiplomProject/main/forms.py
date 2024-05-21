@@ -1,15 +1,14 @@
-from django.forms import ModelForm
+from django.forms import ModelForm, forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django_recaptcha.fields import ReCaptchaField
-from .models import Article, Grade, Comment ,Support
+from .models import Article, Grade, Comment, Support
 
 
 class ArticleModelForm(ModelForm):
-
     class Meta:
         model = Article
-        fields = ('title', 'category' , 'text',  'email','my_image')
+        fields = '__all__'
 
 
 class GradeModelForm(ModelForm):
@@ -33,7 +32,6 @@ class SupportModelForm(ModelForm):
 class RegisterForm(UserCreationForm):
     captcha = ReCaptchaField()
 
-
     class Meta:
         model = User
-        fields = ('username', 'email' , 'password1', 'password2')
+        fields = ('username', 'email', 'password1', 'password2')

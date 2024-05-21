@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView
-from .models import Article, Grade
+from .models import Article, Grade,  Comment
 from .forms import ArticleModelForm, RegisterForm, GradeModelForm, SupportModelForm
 
 
@@ -10,22 +10,22 @@ def main(request):
 
 
 def sport(request):
-    sports = Article.objects.filter(category='спорт')
+    sports = Article.objects.filter(category='sport')
     return render(request, 'topic/sport.html', {'sports': sports[::-1]})
 
 
 def scince(request):
-    scinces = Article.objects.filter(category='наука')
+    scinces = Article.objects.filter(category='scince')
     return render(request, 'topic/scince.html', {'scinces': scinces[::-1]})
 
 
 def cooking(request):
-    cookings = Article.objects.filter(category='кулинария')
+    cookings = Article.objects.filter(category='cooking')
     return render(request, 'topic/cooking.html', {'cookings': cookings[::-1]})
 
 
 def technic(request):
-    technics = Article.objects.filter(category='технологии')
+    technics = Article.objects.filter(category='technic')
     return render(request, 'topic/technic.html', {'technics': technics[::-1]})
 
 
