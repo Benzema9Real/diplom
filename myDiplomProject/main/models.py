@@ -29,7 +29,7 @@ class Comment(models.Model):
 class Support(models.Model):
     text = models.TextField('Ваша проблема')
     nomer = models.IntegerField('Ваш номер(без плюса)')
-    data = models.DateTimeField('Дата')
+    data = models.DateTimeField('Дата',auto_now_add=True)
 
 
 class Grade(models.Model):
