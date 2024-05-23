@@ -1,0 +1,12 @@
+.color3{
+    background: rgb(141,194,111);
+}
+.list{    background: #FFFFFF;
+
+   width: 400px;
+    height: 200px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-left: 40%;
+}
+.center{
+    text-align: center;}
