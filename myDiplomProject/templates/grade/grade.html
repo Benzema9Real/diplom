@@ -12,9 +12,9 @@
 
 </HEADER>
 <SECTION>
-
-{% for grade in grades %}
 <div class="center">Оценки</div>
+{% for grade in grades %}
+
 <br>
 <div class="card w-50">
   <div class="card-body">
@@ -27,19 +27,14 @@
                         <br>
  Оценка: {{grade.grade}}
                         <br>
-{% endfor %}</p>
+ </p>
+<br>
 
   </div>
 </div>
+{% endfor %}
 
-    <br>
-</SECTION>
-
-
-
-
-
-
+<br>
 
 
 

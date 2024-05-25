@@ -25,15 +25,16 @@
                 <div class="color">
                 <div class="list">
                     <div class="center">
-<h3>Добавить комментарий</h3>
+<h3>Добавить комментарий</h3>    </div>
     <form method="post">
         <h5>
         {% csrf_token %}
         {{ comment_form.as_p }}
-        <button type="submit">Submit</button>
+      <div class="center">
+<button type="button" class="btn btn-outline-secondary">Сохранить</button></div>
         </h5>
     </form>
-                    </div>
+
                 </div></div>
 </section>
 
