@@ -1,4 +1,5 @@
-from django.forms import ModelForm, forms
+from django import forms
+from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django_recaptcha.fields import ReCaptchaField
@@ -22,6 +23,7 @@ class CommentModelForm(ModelForm):
         model = Comment
         fields = ['text', 'email']
 
+
 class SupportModelForm(ModelForm):
     class Meta:
         model = Support
@@ -29,7 +31,12 @@ class SupportModelForm(ModelForm):
 
 
 class RegisterForm(UserCreationForm):
-    captcha = ReCaptchaField()
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'input100', 'placeholder': 'Username'}))
+    email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'input100', 'placeholder': 'Email'}))
+    password1 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'input100', 'placeholder': 'Password1', 'name': 'pass'}))
+    password2 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'input100', 'placeholder': 'Password 2'}))
 
     class Meta:
         model = User
