@@ -24,18 +24,18 @@ SECRET_KEY = 'django-insecure-o_h-yeppq-o@kpqp07=e6abdk#0!w6)9lwo%h0ukeyq($=9icv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = ['blog.platform.student-project-it-academy.tw1.ru',
-#                  'www.blog.platform.student-project-it-academy.tw1.ru']
-#
-# CSRF_TRUSTED_ORIGINS = [
-#
-#     'https://blog.platform.student-project-it-academy.tw1.ru',
-#
-#     'https://www.blog.platform.student-project-it-academy.tw1.ru',
-#
-# ]
-# CSRF_COOKIE_SECURE = True
-# SESSION_COOKIE_SECURE = True
+ALLOWED_HOSTS = ['blog.platform.student-project-it-academy.tw1.ru',
+                 'www.blog.platform.student-project-it-academy.tw1.ru']
+
+CSRF_TRUSTED_ORIGINS = [
+
+    'https://blog.platform.student-project-it-academy.tw1.ru',
+
+    'https://www.blog.platform.student-project-it-academy.tw1.ru',
+
+]
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 INSTALLED_APPS = [
     'main',
