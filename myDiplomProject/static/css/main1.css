@@ -1,5 +1,5 @@
 .header{
-    background-color: LightSeaGreen;
+  background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
 }
 
 .section{
@@ -38,13 +38,13 @@
     margin-left: 35%;
 }
 .color{
-    background: rgb(141,194,111);
+  background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
 }
 .color2{
     color: rgb(141,194,111);
 }
 .black{
-    background: rgb(141,194,111);
+background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
 }
 .black1{
     background: black;
