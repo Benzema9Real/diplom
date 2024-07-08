@@ -4,7 +4,7 @@ FROM python:3.11
 WORKDIR /app
 
 # Копируем requirements.txt и устанавливаем зависимости
-COPY requirements.txt /app/
+COPY req.txt /app/
 
 RUN pip install -r req.txt
 
