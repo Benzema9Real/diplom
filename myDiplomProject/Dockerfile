@@ -1,15 +1,18 @@
 FROM python:3.11
 
-
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-COPY req.txt /app/
+# Копируем requirements.txt и устанавливаем зависимости
+COPY requirements.txt /app/
 
 RUN pip install -r req.txt
 
+# Копируем весь проект в контейнер
 COPY . /app/
 
-CMD ["python","manage.py","runserver","0.0.0.0:8000"]
+# Выполняем миграции и собираем статические файлы
+RUN python manage.py migrate
+
+# Запускаем приложение
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
