@@ -1,0 +1,20 @@
+.help{
+    background-color: black;
+}
+
+.ins{
+    width: 50px;
+    height: 60px;
+}
+
+.help_text{
+    margin-bottom: 100%;
+}
+
+.help_head{
+    color: rgb(141,194,111);
+}
+.help_color{
+    background: rgb(141,194,111);
+}
+
