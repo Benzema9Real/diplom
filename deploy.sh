@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Путь до директории вашего проекта
-PROJECT_DIR="/root/diplom/myDiplomProject"
+PROJECT_DIR="/root/diplom/"
 
 # Переходим в директорию проекта
 cd $PROJECT_DIR
