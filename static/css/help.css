@@ -15,6 +15,7 @@
     color: rgb(141,194,111);
 }
 .help_color{
-    background: rgb(141,194,111);
+     background: rgb(167,255,0);
+background: linear-gradient(90deg, rgba(167,255,0,1) 0%, rgba(252,136,69,1) 100%);
 }
 

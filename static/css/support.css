@@ -91,9 +91,9 @@ text-align: center
   color: #EF3B3A;
 }
 body {
-  background: #76b852; /* fallback for old browsers */
-  background: rgb(141,194,111);
-  background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+ /* fallback for old browsers */
+background: rgb(116,255,0);
+background: linear-gradient(90deg, rgba(116,255,0,1) 0%, rgba(81,69,252,1) 100%);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

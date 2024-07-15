@@ -4,7 +4,8 @@
 <head>
     <style>
 body{
-        background: rgb(141,194,111);}
+  background: rgb(167,255,0);
+background: linear-gradient(90deg, rgba(167,255,0,1) 0%, rgba(252,136,69,1) 100%);}
     </style>
     	<link rel="icon" type="image/png" href="{% static 'Login_v1/images/icons/Settings.png' %}"/>
     <meta charset="UTF-8">
@@ -15,27 +16,85 @@ body{
 <body class="help_color">
 
 <div class="help"><h1> <img src="{% static 'media/ins.jpg' %}" class="ins">
-    <span class="help_head">Инструкfция создания своей статьи:</span></h1></div>
+    <span class="help_head">Инструкция создания своей статьи:</span></h1></div>
 <br>
-<h1><span class="help_text">
-Шаг №1
-<br>
-Зарегистрируйтесь или войдите если ранне регистрировались.
-<br>
-Шаг №2
-<br>
-Нажмите кнопку создать и обезательно укажите категорию.
-<br>
-    Шаг №3
-    <br>
+
+<h1>
+ <div class="container mt-5">
+    <h2>Инструкция создания своей статьи:</h2>
+    <div class="accordion" id="faqAccordion" style="background: rgb(0,255,248);
+background: linear-gradient(90deg, rgba(0,255,248,1) 0%, rgba(229,252,69,1) 100%);">
+        <div class="accordion-item" style="background: rgb(0,255,248);
+background: linear-gradient(90deg, rgba(0,255,248,1) 0%, rgba(229,252,69,1) 100%);">
+            <h2 class="accordion-header" id="heading1" style="background: rgb(0,255,248);
+background: linear-gradient(90deg, rgba(0,255,248,1) 0%, rgba(229,252,69,1) 100%);">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                        aria-expanded="true" aria-controls="collapse1" style="background: rgb(0,255,248);
+background: linear-gradient(90deg, rgba(0,255,248,1) 0%, rgba(229,252,69,1) 100%);">
+                   Шаг №1
+                </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                 data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                   Зарегистрируйтесь или войдите если уже регистрировались.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item" style="background: rgb(0,121,255);
+background: linear-gradient(90deg, rgba(0,121,255,1) 0%, rgba(252,136,69,1) 100%);">
+            <h2 class="accordion-header" id="heading2" style="background: rgb(0,121,255);
+background: linear-gradient(90deg, rgba(0,121,255,1) 0%, rgba(252,136,69,1) 100%);">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                        aria-expanded="false" aria-controls="collapse2" style="background: rgb(0,121,255);
+background: linear-gradient(90deg, rgba(0,121,255,1) 0%, rgba(252,136,69,1) 100%);">
+                Шаг №2
+                </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                 data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                 Нажмите кнопку создать и обезательно заполните все.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                        aria-expanded="false" aria-controls="collapse3" style="background: rgb(115,0,255);
+background: linear-gradient(90deg, rgba(115,0,255,1) 0%, rgba(211,241,0,1) 100%);">
+                   Шаг №3
+                </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                 data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: rgb(115,0,255);
+background: linear-gradient(90deg, rgba(115,0,255,1) 0%, rgba(211,241,0,1) 100%);">
+
 Обновите сайт.
-    <br>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                        aria-expanded="false" aria-controls="collapse4" style="background: rgb(255,0,151);
+background: linear-gradient(90deg, rgba(255,0,151,1) 0%, rgba(56,0,241,1) 100%);">
+                    Если все равно не получилось обратитесь в техподдержку.
+                </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                 data-bs-parent="#faqAccordion">
+                <div class="accordion-body" style="background: rgb(255,0,151);
+background: linear-gradient(90deg, rgba(255,0,151,1) 0%, rgba(56,0,241,1) 100%);">
+                  Это -<button type="button" class="btn btn-outline-warning"><a href="{% url 'support' %}">Техподдержка</a></button>
+                </div>
+            </div>
+        </div>
 
-    Если все равно не получилось обратитесь в техподдержку.
-    <br>
-    Это -<button type="button" class="btn btn-outline-warning"><a href="{% url 'support' %}">Техподдержка</a></button>
-
-
+    </div>
+</div>
+</h1>
 
 
 
