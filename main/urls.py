@@ -1,10 +1,8 @@
-from django.template.defaulttags import url
-
 from . import views
 from django.urls import path
-from django.contrib.auth.views import LoginView
 
-urlpatterns = [path('', views.main, name='main'),
+urlpatterns = [path('', views.main2, name='main2'),
+               path('main/', views.main, name='main'),
                path('sport/', views.sport, name='sport'),
                path('cooking/', views.cooking, name='cooking'),
                path('scince/', views.scince, name='scince'),
@@ -16,5 +14,7 @@ urlpatterns = [path('', views.main, name='main'),
                path('grade_forms/', views.grade_forms, name='grade_forms'),
                path('grade/', views.grade, name='grade'),
                path('login/', views.login, name='login'),
+               path('about_us/', views.about_us, name='about_us'),
+               path('language/', views.language, name='language'),
                path('<int:pk>/', views.MyDetailView.as_view(), name='detail')
                ]

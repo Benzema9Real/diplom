@@ -1,16 +1,19 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.views.generic import DetailView
-from .models import Article, Grade, Comment
+from .models import Article, Grade, Comment, Language
 from .forms import ArticleModelForm, RegisterForm, GradeModelForm, SupportModelForm, CommentModelForm
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
-from .forms import LoginForm
-
+from .forms import LoginForms
+from django import forms
 
 def main(request):
     return render(request, 'main.html')
+
+def main2(request):
+    return render(request, 'main2.html')
 
 
 def sport(request):
@@ -88,10 +91,10 @@ def registr(request):
 
 def login(request):
     if request.method == 'POST':
-        form = LoginForm(request.POST)
+        form = LoginForms(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            user = authenticate(username=cd['username'], password=cd['password'])
+            user = authenticate(username=cd['username'](forms.CharField(widget=forms.TextInput(attrs={'class': 'input100', 'placeholder': 'Username'}))), password=cd['password'])
             if user is not None:
                 if user.is_active:
                     login(request, user)
@@ -101,7 +104,7 @@ def login(request):
             else:
                 return HttpResponse('Invalid login')
     else:
-        form = LoginForm()
+        form = LoginForms()
     return render(request, 'registration/login.html', {'form': form})
 
 
@@ -133,3 +136,11 @@ def support(request):
     else:
         form = SupportModelForm()
     return render(request, 'help/support.html', {'form': form})
+
+
+def language(request):
+    languages = Language.objects.all()
+    return render(request, 'languages.html', {'languages': languages})
+
+def about_us(request):
+    return render(request, 'about_us.html')

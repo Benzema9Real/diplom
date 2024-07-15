@@ -37,3 +37,6 @@ class Grade(models.Model):
     comment = models.TextField('Комментарий')
     email = models.EmailField('Email')
 
+class Language(models.Model):
+    name = models.CharField('Название', max_length=50)
+    my_image = models.ImageField(upload_to='images/')
