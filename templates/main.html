@@ -4,53 +4,57 @@
 <head>
     <style>
 
-.menu-bar {
-  border-radius: 25px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: inline-flex;
-background: rgb(255,0,0);
-background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgba(226,100,33,1) 23%, rgba(29,0,255,1) 100%);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  align-items: center;
-  padding: 0 10px;
-  margin: 50px 0 0 0;
-}
-.menu-bar li {
-  list-style: none;
-  color: white;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: 12px 16px;
-  margin: 0 8px;
-  position: relative;
-  cursor: pointer;
-  white-space: nowrap;
-}
-.menu-bar li::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  transition: 0.2s;
-  border-radius: 25px;
-}
-.menu-bar li:hover {
-  color: black;
-}
-.menu-bar li:hover::before {
-  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
-  box-shadow: 0px 3px 20px 0px black;
-  transform: scale(1.2);
-}</style>
+        .menu-bar {
+            border-radius: 25px;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            display: inline-flex;
+            background: rgb(255, 0, 0);
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(255, 115, 0, 1) 0%, rgba(226, 100, 33, 1) 23%, rgba(29, 0, 255, 1) 100%);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            align-items: center;
+            padding: 0 10px;
+            margin: 50px 0 0 0;
+        }
+
+        .menu-bar li {
+            list-style: none;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            padding: 12px 16px;
+            margin: 0 8px;
+            position: relative;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .menu-bar li::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            transition: 0.2s;
+            border-radius: 25px;
+        }
+
+        .menu-bar li:hover {
+            color: black;
+        }
+
+        .menu-bar li:hover::before {
+            background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+            box-shadow: 0px 3px 20px 0px black;
+            transform: scale(1.2);
+        }</style>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    	<link rel="icon" type="image/png" href="{% static 'Login_v1/images/icons/favicon.ico' %}"/>
+    <link rel="icon" type="image/png" href="{% static 'Login_v1/images/icons/favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'css/main1.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -58,23 +62,21 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
 </head>
 <body>
 
- <HEADER class="header">
-<div class="container">
-<nav>
-		<ul class="menu-bar">
-  <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-  <li><a class="nav-link" href="{% url 'sport' %}"> </a></li>
-  <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-      <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-  <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-  <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-              <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-  <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-  <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
-</ul>
-	</nav>
-</div>
+<HEADER class="header">
+    <div class="container">
+        <nav style="text-align: center">
+            <ul class="menu-bar" style="text-align: center">
+                <li><a class="nav-link" href="{% url 'sport' %}">Спорт</a></li>
+                <li><a class="nav-link" href="{% url 'cooking' %}">Кулинария</a></li>
+                <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
+                <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
+                <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
+                <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
 
+                <li><a class="nav-link" href="{% url 'sport' %}"> Спорт</a></li>
+            </ul>
+        </nav>
+    </div>
 
 
 </HEADER>
@@ -100,12 +102,12 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
             <div class="color">
                 <div class="list">
                     <div class="center">
-                    <h3>
-                    Это - платформы для блоггинга, которая позволит пользователям создавать,
-                    редактировать и комментировать статьи. Платформа будет обеспечивать удоб-
-                    ное взаимодействие между авторами статей и читателями, а также обеспечит
-                    базовый функционал управления контентом для администраторов.
-</h3></div>
+                        <h3>
+                            Это - платформы для блоггинга, которая позволит пользователям создавать,
+                            редактировать и комментировать статьи. Платформа будет обеспечивать удоб-
+                            ное взаимодействие между авторами статей и читателями, а также обеспечит
+                            базовый функционал управления контентом для администраторов.
+                        </h3></div>
                 </div>
 
 
@@ -144,7 +146,7 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'media/scince.png' %}" class="d-block w-100"  >
+                            <img src="{% static 'media/scince.png' %}" class="d-block w-100">
                             <div class="carousel-caption d-none d-md-block">
                                 <p>
                                 <h1>Наука</h1></p>
@@ -159,7 +161,7 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'media/technic.png' %}" class="d-block w-100"  >
+                            <img src="{% static 'media/technic.png' %}" class="d-block w-100">
                             <div class="carousel-caption d-none d-md-block">
 
                                 <p>
@@ -184,7 +186,7 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
     </SECTION>
 </div>
 <FOOTER class="footer_name">
-    <h1><span class="footer">Платформы для блоггинга</span></h1>
+    <h1><span class="footer" style="text-align: center">Платформы для блоггинга</span></h1>
     <br>
     <br>
 
@@ -206,7 +208,7 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
                 Также можете посмотреть:
                 <br>
                 <br>
-                <a href="http://188.225.26.121:82/" >Гостевая книга с чатом.</a>
+                <a href="http://188.225.26.121:82/">Гостевая книга с чатом.</a>
                 <br>
                 <br>
                 Каталог книг.
@@ -214,7 +216,7 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
         </div>
     </h4>
 
-<br>
+    <br>
     <br>
 
 
@@ -222,8 +224,6 @@ background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,115,0,1) 0%, rgb
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
-
 
 
 </body>

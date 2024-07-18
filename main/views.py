@@ -9,8 +9,10 @@ from django.contrib.auth import authenticate, login
 from .forms import LoginForm
 from django import forms
 
+
 def main(request):
     return render(request, 'main.html')
+
 
 def main2(request):
     return render(request, 'main2.html')
@@ -40,12 +42,6 @@ def help(request):
     return render(request, 'help/help.html')
 
 
-
-def support(request):
-    return render(request, 'help/support.html')
-
-def successfully(request):
-    return render(request, 'help/successfully.html')
 class MyDetailView(DetailView):
     model = Article
     template_name = 'detail/detail.html'
@@ -96,7 +92,9 @@ def login(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            user = authenticate(username=cd['username'](forms.CharField(widget=forms.TextInput(attrs={'class': 'input100', 'placeholder': 'Username'}))), password=cd['password'])
+            user = authenticate(username=cd['username'](
+                forms.CharField(widget=forms.TextInput(attrs={'class': 'input100', 'placeholder': 'Username'}))),
+                                password=cd['password'])
             if user is not None:
                 if user.is_active:
                     login(request, user)
@@ -140,9 +138,14 @@ def support(request):
     return render(request, 'help/support.html', {'form': form})
 
 
+def successfully(request):
+    return render(request, 'help/successfully.html')
+
+
 def language(request):
     languages = Language.objects.all()
     return render(request, 'languages.html', {'languages': languages})
+
 
 def about_us(request):
     return render(request, 'about_us.html')

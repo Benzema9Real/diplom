@@ -39,7 +39,6 @@ DEBUG = True
 
 INSTALLED_APPS = [
     'main',
-    'django_recaptcha',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -132,8 +131,7 @@ LOGOUT_REDIRECT_URL = 'main'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RECAPTCHA_PUBLIC_KEY = '6LejLOYpAAAAAKELYU4Zp-A5a0reVBUlflpkh_vy'
-RECAPTCHA_PRIVATE_KEY = '6LejLOYpAAAAAER94vJXHZL8rVFHIQ0MEK6UudHs'
+
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
