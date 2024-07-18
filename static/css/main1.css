@@ -1,5 +1,6 @@
 .header{
-  background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+background: rgb(9,255,0);
+background: linear-gradient(90deg, rgba(9,255,0,1) 0%, rgba(124,242,3,1) 33%, rgba(240,231,5,1) 62%, rgba(255,34,0,1) 100%);
 }
 
 .section{
@@ -38,13 +39,16 @@
     margin-left: 35%;
 }
 .color{
-  background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+background: rgb(9,255,0);
+background: linear-gradient(90deg, rgba(9,255,0,1) 0%, rgba(124,242,3,1) 33%, rgba(240,231,5,1) 62%, rgba(255,34,0,1) 100%);
 }
 .color2{
     color: rgb(141,194,111);
 }
 .black{
-background: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+background: rgb(255,34,0);
+background: rgb(9,255,0);
+background: linear-gradient(90deg, rgba(9,255,0,1) 0%, rgba(124,242,3,1) 33%, rgba(240,231,5,1) 62%, rgba(255,34,0,1) 100%);
 }
 .black1{
     background: black;

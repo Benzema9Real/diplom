@@ -6,7 +6,7 @@ from .forms import ArticleModelForm, RegisterForm, GradeModelForm, SupportModelF
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
-from .forms import LoginForms
+from .forms import LoginForm
 from django import forms
 
 def main(request):
@@ -40,10 +40,12 @@ def help(request):
     return render(request, 'help/help.html')
 
 
+
 def support(request):
     return render(request, 'help/support.html')
 
-
+def successfully(request):
+    return render(request, 'help/successfully.html')
 class MyDetailView(DetailView):
     model = Article
     template_name = 'detail/detail.html'
@@ -91,7 +93,7 @@ def registr(request):
 
 def login(request):
     if request.method == 'POST':
-        form = LoginForms(request.POST)
+        form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
             user = authenticate(username=cd['username'](forms.CharField(widget=forms.TextInput(attrs={'class': 'input100', 'placeholder': 'Username'}))), password=cd['password'])
@@ -104,7 +106,7 @@ def login(request):
             else:
                 return HttpResponse('Invalid login')
     else:
-        form = LoginForms()
+        form = LoginForm()
     return render(request, 'registration/login.html', {'form': form})
 
 
@@ -131,7 +133,7 @@ def support(request):
         form = SupportModelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('support')
+            return redirect('successfully')
 
     else:
         form = SupportModelForm()
