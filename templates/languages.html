@@ -1,10 +1,173 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body{background: rgb(255,0,134);
+background: linear-gradient(90deg, rgba(255,0,134,1) 0%, rgba(0,39,255,1) 100%);}
+         .menu-bar {
+            border-radius: 25px;
+            height: -webkit-fit-content;
+            height: -moz-fit-content;
+            height: fit-content;
+            display: inline-flex;
+           background: rgb(9,255,0);
+background: linear-gradient(90deg, rgba(9,255,0,1) 0%, rgba(255,102,0,1) 63%);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            align-items: center;
+            padding: 0 10px;
+            margin: 50px 0 0 0;
+        }
+
+        .menu-bar li {
+            list-style: none;
+            color: white;
+            font-family: sans-serif;
+            font-weight: bold;
+            padding: 12px 16px;
+            margin: 0 8px;
+            position: relative;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .menu-bar li::before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            transition: 0.2s;
+            border-radius: 25px;
+        }
+
+        .menu-bar li:hover {
+            color: black;
+        }
+
+        .menu-bar li:hover::before {
+            background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+            box-shadow: 0px 3px 20px 0px black;
+            transform: scale(1.2);
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>О сайте</title>
 </head>
 <body>
+<br>
+<br>
 
+    <div style="text-align: center"><h1>Платформа для блогинга</h1></div>
+ <div class="container">
+        <nav style="text-align: center">
+            <ul class="menu-bar" style="text-align: center">
+                <li><a class="nav-link" href="{% url 'sport' %}">Спорт</a></li>
+                <li><a class="nav-link" href="{% url 'cooking' %}">Кулинария</a></li>
+                <li><a class="nav-link" href="{% url 'scince' %}"> Наука</a></li>
+                <li><a class="nav-link" href="{% url 'technic' %}"> Технологии</a></li>
+                <li><a class="nav-link" href="{% url 'help' %}"> Инструкция создания</a></li>
+                <li><a class="nav-link" href="{% url 'grade_forms' %}"> Оценка сайта</a></li>
+
+                <li><a class="nav-link" href="{% url 'language' %}"> О сайте</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<br>
+<br><br>
+<br>
+   <div style="text-align: center"><h1>Все что было использовано для создания этого сайта.</h1></div>
+
+
+
+
+
+<div class="row justify-content-evenly">
+    <div class="col-4">
+     <div class="card" style="width: 18rem;18rem;">
+  <img src="{% static 'media/python-.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center">Python</h5>
+
+  </div>
+</div>
+    </div>
+    <div class="col-4">
+     <div class="card" style="width: 18rem; ">
+ <img src="{% static 'media/sql.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+       <h5 class="card-title" style="text-align: center">SQL</h5>
+  </div>
+</div>
+    </div>
+             <div class="col-4">
+     <div class="card" style="width: 18rem; ">
+ <img src="{% static 'media/boots.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+       <h5 class="card-title" style="text-align: center">Bootstrap</h5>
+  </div>
+  </div>
+             </div></div>
+<br>
+    <br>
+    <br>
+    <br>
+<div class="row justify-content-evenly">
+    <div class="col-4">
+     <div class="card" style="width: 18rem;18rem;">
+  <img src="{% static 'media/django.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center">Django</h5>
+
+  </div>
+</div>
+    </div>
+    <div class="col-4">
+     <div class="card" style="width: 18rem; ">
+ <img src="{% static 'media/ht.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+       <h5 class="card-title" style="text-align: center">Html</h5>
+  </div>
+</div>
+    </div>
+        <div class="col-4">
+     <div class="card" style="width: 18rem; ">
+ <img src="{% static 'media/css.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+       <h5 class="card-title" style="text-align: center">CSS</h5>
+  </div>
+     </div></div></div>
+<br>
+            <br>
+            <div class="row justify-content-evenly">
+    <div class="col-4">
+     <div class="card" style="width: 18rem;18rem;">
+  <img src="{% static 'media/git.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center">Git</h5>
+
+  </div>
+</div>
+    </div>
+    <div class="col-4">
+     <div class="card" style="width: 18rem; ">
+ <img src="{% static 'media/docker.png' %}" class="card-img-top" style="width: 280px;height: 160px">
+  <div class="card-body">
+       <h5 class="card-title" style="text-align: center">Docker</h5>
+  </div>
+</div>
+    </div>
+
+
+<br>
+<br><br>
+<br>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

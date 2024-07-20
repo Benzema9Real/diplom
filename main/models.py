@@ -9,7 +9,7 @@ class Article(models.Model):
         ('cooking', 'кулинария'),
         ('technic', 'технологии'))
 
-    title = models.CharField('Название', max_length=50)
+    title = models.CharField('Название', max_length=150)
     text = models.TextField('Содержание')
     category = models.CharField('Категория', max_length=50, choices=Choices_list)
     data = models.DateTimeField('Дата публикации', auto_now_add=True)

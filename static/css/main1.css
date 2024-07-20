@@ -68,7 +68,7 @@ background: linear-gradient(90deg, rgba(9,255,0,1) 0%, rgba(124,242,3,1) 33%, rg
 .list{    background: #FFFFFF;
 
    width: 500px;
-    height: 400px;
+    height: 350px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     margin-left: 30%;
 }
